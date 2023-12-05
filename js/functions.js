@@ -25,7 +25,10 @@ $(function(){
     $('input[type=text]').focus(function(){
         resetInvalidField($(this));
     })
-
+    $('input[name=tel]').focus(function(){
+        $('input[name=tel]').attr('placeholder','(xx)xxxxx-xxxx');
+    });
+    
     $('form#form1').submit(function(){
         var name = $('input[name=name]').val();
         var tel = $('input[name=tel]').val();
